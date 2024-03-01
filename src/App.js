@@ -73,7 +73,7 @@ const App = () => {
               <>
                 <span className="red">G</span>oogle <span className="blue">D</span>evelopers <span className="green">S</span>tudent <span className="yellow">C</span>lub
                 <br />
-                <span className="blue" style={{ fontSize: dimensions.width < 700 ? "4.3vw" : "1.6vw", align:'center' }}>
+                <span className="blue" style={{ paddingTop: window.innerWidth < 700 ? "-30vw" : "0vw",fontSize: dimensions.width < 700 ? "4.3vw" : "1.6vw", align:'center' }}>
                   Symbiosis Institute of Technology Chapter
                 </span>
               </>
