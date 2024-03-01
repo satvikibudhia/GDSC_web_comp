@@ -7,12 +7,15 @@
 }
 
 .gdsc-text span {
-  font-size: 4vw;
-  /* transition: opacity 1s; */
+  font-size: 4vh; 
+  transition: all 0.5s ease-in-out;
+  transform-origin: left center; /* Set the transform origin to the left */
+  transform: rotateY(90deg); 
 }
 
-.expanded-text-content {
-  font-size: 2.5vw;
+.expanded-text {
+  font-size: 4vh;
+  transition: all 0.5s ease-in-out; /* Default font size for small screens */
 }
 
 .red {
@@ -31,10 +34,16 @@
   color: #FABC04;
 }
 
-
-.abc-image {
-  width: 100%;
-  height: 100%;
-  object-fit: auto; /* To ensure the image covers the entire area */
+@media screen and (min-width: 896px) {
+  .gdsc-text span {
+    font-size: 5.5vh; /* Adjust font size for larger screens */
+    transition: all 0.5s ease-in-out;
+    transform-origin: left center; /* Set the transform origin to the left */
+  transform: rotateY(90deg); 
+  }
+  
+  .expanded-text {
+    font-size: 5.5vh; 
+    transition: all 0.5s ease-in-out;
+  }
 }
-
