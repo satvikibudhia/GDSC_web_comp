@@ -138,7 +138,7 @@ function App() {
                 textAlign: "left",
               }}
             >
-              What Sets Us Apart
+              What is GDSC
             </h1>
 
             {/* Updated Content */}
@@ -148,12 +148,7 @@ function App() {
                 marginBottom: windowWidth < 600 ? "1vw" : "3vw",
               }}
             >
-              Our GDSC community is dedicated to fostering collaboration and
-              innovation in technology. We strive to provide a platform for
-              students to learn, grow, and create impactful projects together.
-              With a focus on inclusivity and diversity, we aim to empower every
-              member to explore their passions and contribute meaningfully to the
-              tech industry.
+              Google Developer Student Clubs (GDSC) are hubs for students passionate about Google technologies. These clubs offer a platform for collaboration, innovation, and skill development. Through workshops, hackathons, and other events, members explore tech, build projects, and contribute to the community. GDSCs prioritize inclusivity, empowering every member to thrive in the tech industry.
             </p>
             {/* Learn More Button */}
             <button

@@ -135,7 +135,7 @@ function App() {
                 textAlign: "left",
               }}
             >
-              What Sets Us Apart
+              About GDSC SIT
             </h1>
 
             {/* Updated Content */}
@@ -145,7 +145,7 @@ function App() {
                 marginBottom: windowWidth < 600 ? "1vw" : "3vw",
               }}
             >
-              Our GDSC community is dedicated to fostering collaboration and
+            GDSC SIT is dedicated to fostering collaboration and
               innovation in technology. We strive to provide a platform for
               students to learn, grow, and create impactful projects together.
               With a focus on inclusivity and diversity, we aim to empower every
