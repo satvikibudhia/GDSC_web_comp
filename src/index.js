@@ -2,12 +2,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './hero';
+import Abt from './about';
 import './App.css'; // Import your CSS file
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    
+  <Abt/>
   </React.StrictMode>,
   document.getElementById('root')
 );

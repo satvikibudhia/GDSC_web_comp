@@ -67,7 +67,7 @@ const App = () => {
         </div>
       )}
       {showText && (
-        <div className="text-container" style={{ textAlign: 'left', paddingTop: dimensions.width < 700 ? '38.5vh' : '5vw' }}>
+        <div className="text-container" style={{ textAlign: 'left', paddingTop: dimensions.width < 700 ? '30.5vh' : '5vw' }}>
           <div className={showExpandedText ? "expanded-text" : "gdsc-text"} style={{ lineHeight: "1.2", paddingLeft: dimensions.width < 700 ? "30.5vw" : "5vw" }}>
             {showExpandedText ? (
               <>
