@@ -4,7 +4,7 @@ import animation1 from './animation/1.json';
 import animation2 from './animation/2.json';
 import animation3 from './animation/3.json';
 import animation4 from './animation/4.json';
-import gdscImage from "./images/gdsc.png";
+import gdscImage from "./images/gdsc_sit.png";
 
 function App() {
   const [animations, setAnimations] = useState([]);
@@ -30,13 +30,13 @@ function App() {
 
     const newAnimations = [
       //red
-      { animationData: animation1, style: { ...animationStyle, top: '0', right: '-10%', zIndex: 0 } },
+      { animationData: animation1, style: { ...animationStyle, top: '0', right: '0', marginRight: '-7.5vw', zIndex: 0 } },
       //green
-      { animationData: animation2, style: { ...animationStyle, bottom: '10%', right: '25%', transform: 'translateY(50%)', zIndex: 0 } },
+      { animationData: animation2, style: { ...animationStyle, bottom: '20%', right: '25%', marginRight: '-7.5vw', transform: 'translateY(50%)', zIndex: 0 } },
       //blue
-      { animationData: animation3, style: { ...animationStyle, top: '30%', left: '25%', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', transform: 'translateY(-50%)', zIndex: 0 } },
+      { animationData: animation3, style: { ...animationStyle, top: '70%', left: '25%', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', transform: 'translateY(-50%)', zIndex: 0 } },
       //yellow
-      { animationData: animation4, style: { ...animationStyle, bottom: '-20%', left: '0', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', zIndex: 0 } },
+      { animationData: animation4, style: { ...animationStyle, bottom: '-5%', left: '0', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', zIndex: 0 } },
     ];
 
     setAnimations(newAnimations);
@@ -64,10 +64,6 @@ function App() {
     return () => clearInterval(animationInterval);
   }, []);
 
-  const handleLearnMoreClick = () => {
-    window.location.href = 'https://developers.google.com/community/gdsc';
-  };
-
   return (
     <div style={{ position: 'relative', zIndex: 1 }}>
       <div
@@ -86,18 +82,18 @@ function App() {
           className="content-wrapper"
           style={{
             display: "flex",
-            flexDirection: windowWidth < 600 ? "column" : "row",
+            flexDirection: windowWidth < 600 ? "column" : "row-reverse", // Change flexDirection to row-reverse for laptop view
             justifyContent: "flex-start",
             alignItems: "flex-start",
             maxWidth: "1200px",
             margin: "0 auto",
             height: windowWidth < 600 ? "auto" : "25vw",
             marginTop: "0",
-            marginBottom: windowWidth < 600 ? "20px" : "-75px",
             position: "relative", // Add position relative
             zIndex: 2, // Increase z-index to place content above animations
           }}
         >
+          {/* Right Box (Image) */}
           <img
             src={gdscImage}
             alt="GDSC"
@@ -108,24 +104,25 @@ function App() {
               paddingTop: windowWidth < 600 ? "10%" : "0%",
               maxWidth: "480px",
               borderRadius: "10px",
-              marginRight: windowWidth < 600 ? "0" : "5%",
+              marginLeft: windowWidth < 600 ? "0" : "5%", // Change marginLeft to 5% for laptop view
               position: "relative", // Add position relative
               zIndex: 2, // Increase z-index to place content above animations
             }}
           />
 
-          {/* Right Box (Content) */}
+          {/* Left Box (Text) */}
           <div
-            className="right-box"
+            className="left-box"
             style={{
               backgroundColor: "white",
               borderRadius: "10px",
               padding: "5%",
+              paddingTop:"-5%",
               flex: "1",
               height: "100%",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
               boxSizing: "border-box",
-              overflowY: "hidden",
+              overflowY: "hidden", 
               position: "relative", // Add position relative
               zIndex: 2, // Increase z-index to place content above animations
             }}
@@ -155,21 +152,6 @@ function App() {
               member to explore their passions and contribute meaningfully to the
               tech industry.
             </p>
-            {/* Learn More Button */}
-            <button
-              onClick={handleLearnMoreClick}
-              style={{
-                fontSize: "1rem",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                backgroundColor: "#007bff",
-                color: "#fff",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Learn More
-            </button>
           </div>
         </div>
       </div>

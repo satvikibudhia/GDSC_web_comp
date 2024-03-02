@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
 import animationData from './ani.json';
-import './App.css';
+import './style.css';
 import herobg from './images/herobg.png';
 import pic from './images/pic.png';
 
@@ -11,14 +11,12 @@ window.addEventListener('orientationchange', function() {
   }, 300);
 });
 
-const App = () => {
+const Abt = () => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
   const [showText, setShowText] = useState(false);
   const [showExpandedText, setShowExpandedText] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-
     const handleResize = () => {
       setDimensions({ width: window.innerWidth, height: window.innerHeight });
     };
@@ -28,6 +26,7 @@ const App = () => {
     };
 
     handleResize();
+    document.body.style.overflowX = 'hidden'; // Set overflowX to hidden
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', handleOrientationChange);
@@ -41,7 +40,6 @@ const App = () => {
 
   const handleAnimationComplete = () => {
     setShowText(true);
-    document.body.style.overflowY = 'hidden';
     setTimeout(() => setShowExpandedText(true), 1000);
   };
 
@@ -88,10 +86,9 @@ const App = () => {
                 <span className="green">S</span>
                 <span className="yellow">C</span><br/>
                 <span className="blue" style={{fontSize: window.innerWidth < 700 ? "4.5vw" : "1.2vw"}} >
-  Symbiosis Institute of Technology Chapter
-</span>
-<br />
-
+                  Symbiosis Institute of Technology Chapter
+                </span>
+                <br />
               </div>
             )}
           </div>
@@ -100,4 +97,4 @@ const App = () => {
     </div>
   );
 }
-export default App;
+export default Abt;
