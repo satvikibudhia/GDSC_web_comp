@@ -33,28 +33,17 @@ const Page = () => {
 
   const sections = [
     { title: "All", cards: [] },
-    { title: "Artificial Intelligence", cards: [
-      { image: require('./team_images/dhwani_parekh.png'), name: "Dhwani Parekh", text: "" },
-      { image: require('./team_images/smriti_sinha.png'), name: "Smriti Sinha", text: "" }
+    { title: "Podcast", cards: [
+      { image: require('./team_images/srishti_tripathi.png'), name: "Podcast Host 1", text: "Description of Podcast Host 1" },
+      { image: require('./team_images/shardul_kacheria.png'), name: "Podcast Host 2", text: "Description of Podcast Host 2" },
+      { image: require('./team_images/uday_badola.png'), name: "Podcast Host 2", text: "Description of Podcast Host 2" }
     ]},
-    { title: "Flutter", cards: [
-      { image: require('./team_images/dev_bhanushali.png'), name: "Dev Bhanushali", text: "" },
-      { image: require('./team_images/sumedh_dongre.png'), name: "Sumedh Dongre", text: "" }
+    { title: "Design", cards: [
+      { image: require('./team_images/ruhani.png'), name: "Designer 1", text: "Description of Designer 1" },
+      { image: require('./team_images/tawishi_gupta.png'), name: "Designer 2", text: "Description of Designer 2" }
     ]},
-    { title: "Game Development", cards: [
-      { image: require('./team_images/yash_parkhi.png'), name: "Yash Parkhi", text: "" },
-    ]},
-    { title: "Android", cards: [
-      { image: require('./team_images/siddharth_prabhakar.png'), name: "Siddharth Prabhakar", text: "" },
-    ]},
-    { title: "Competitive Programming", cards: [
-      { image: require('./team_images/yajushreshta_shukla.png'), name: "Yajushreshtha Shukla", text: "" },
-      { image: require('./team_images/megha_beria.png'), name: "Megha Beria", text: "" },
-      { image: require('./team_images/divyansh_kumar.png'), name: "Divyansh Kumar", text: "" },
-    ]},
-    { title: "Cloud", cards: [
-      { image: require('./team_images/gautam_ranjhas.png'), name: "Gautam Ranjhas", text: "" },
-      { image: require('./team_images/chahak_sengar.png'), name: "Chahak Sengar", text: "" }
+    { title: "Events", cards: [
+      { image: require('./team_images/ria_vinod.png'), name: "Event Organizer 1", text: "Description of Event Organizer 1" },      
     ]},
   ];
 
@@ -73,7 +62,7 @@ const Page = () => {
         >
           {sections.map((section, index) => (
             <MenuItem key={index} value={section.title}>
-              {section.title === "All" ? "Team" : section.title}
+              {section.title === "All" ? "All" : section.title}
             </MenuItem>
           ))}
         </Select>

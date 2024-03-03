@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import About from "./technical";
-import About2 from "./about2";
+import About2 from "./nontech";
 
 function CustomizedSwitches() {
   const [selectedTeam, setSelectedTeam] = useState("technical"); // Initialize the selected team state
