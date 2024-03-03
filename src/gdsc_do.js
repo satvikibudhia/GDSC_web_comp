@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import angle from "./images/project.png";
+import angle from "./images/project .png";
 import cost from "./images/competition.png";
 import time from "./images/study_jam.png";
 import pain from "./images/study.png";
 
 const styles = {
+  title: {
+    textAlign: "center",
+    fontSize: "24px",
+    fontWeight: "bold",
+    margin: "20px 0",
+  },
   imageContainer: {
     width: "100%",
     display: "flex",
@@ -50,33 +56,37 @@ const IconItem = ({ icon, name, subtext }) => (
 const ImageList = () => {
   const [iconData] = useState([
     {
-      name: "Precise Joint Angle Measurement",
-      subtext: "Accurate angle measurement with no human error",
+      name: "Workshops and Projects",
+      subtext: "Engaging in hands-on projects and workshops",
       icon: angle,
     },
     {
-      name: "Cost Efficient",
-      subtext: "The device is economical and requires little to no maintenance",
+      name: "Competitions and Challenges",
+      subtext: "Organizing coding competitions and challenges",
       icon: cost,
     },
     {
-      name: "Time Saving",
+      name: "Study Jams",
       subtext:
-        "Saves travel time for the patients and helpful for those who are unable to travel",
+        "Organizing study jams for collaborative learning and skill enhancement",
       icon: time,
     },
     {
-      name: "Pain Localization and Intensity",
-      subtext: "Localizes pain and its intensity for further assessment",
+      name: "Skill Development",
+      subtext: "Focusing on skill development through study sessions",
       icon: pain,
     },
   ]);
 
   return (
-    <div id="ures" style={styles.imageContainer}>
-      {iconData.map((item, index) => (
-        <IconItem key={index} {...item} />
-      ))}
+    <div>
+        <br></br>
+      <h1 style={styles.title}>What GDSC SIT Does</h1>
+      <div id="ures" style={styles.imageContainer}>
+        {iconData.map((item, index) => (
+          <IconItem key={index} {...item} />
+        ))}
+      </div>
     </div>
   );
 };

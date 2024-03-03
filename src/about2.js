@@ -29,14 +29,13 @@ function App() {
     };
 
     const newAnimations = [
-      //red
-      { animationData: animation1, style: { ...animationStyle, top: '0', right: '0', marginRight: '-7.5vw', zIndex: 0 } },
+      { animationData: animation1, style: { ...animationStyle, top: '0', right: '-10%', zIndex: 0 } },
       //green
-      { animationData: animation2, style: { ...animationStyle, bottom: '20%', right: '25%', marginRight: '-7.5vw', transform: 'translateY(50%)', zIndex: 0 } },
+      { animationData: animation2, style: { ...animationStyle, bottom: '10%', right: '25%', transform: 'translateY(50%)', zIndex: 0 } },
       //blue
-      { animationData: animation3, style: { ...animationStyle, top: '70%', left: '25%', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', transform: 'translateY(-50%)', zIndex: 0 } },
+      { animationData: animation3, style: { ...animationStyle, top: '30%', left: '25%', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', transform: 'translateY(-50%)', zIndex: 0 } },
       //yellow
-      { animationData: animation4, style: { ...animationStyle, bottom: '-5%', left: '0', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', zIndex: 0 } },
+      { animationData: animation4, style: { ...animationStyle, bottom: '-20%', left: '0', transition: 'left 1s ease-in-out', marginLeft: '-7.5vw', zIndex: 0 } },
     ];
 
     setAnimations(newAnimations);
@@ -100,7 +99,7 @@ function App() {
             style={{
               width: "auto",
               height: windowWidth < 600 ? "30vh" : "50vh",
-              paddingLeft: windowWidth < 600 ? "10%" : "0%",
+              paddingLeft: "0", // Removed right padding
               paddingTop: windowWidth < 600 ? "10%" : "0%",
               maxWidth: "480px",
               borderRadius: "10px",

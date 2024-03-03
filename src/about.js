@@ -108,7 +108,7 @@ function App() {
               paddingTop: windowWidth < 600 ? "10%" : "0%",
               maxWidth: "480px",
               borderRadius: "10px",
-              marginRight: windowWidth < 600 ? "0" : "5%",
+              marginRight: "0", // Remove right margin
               position: "relative", // Add position relative
               zIndex: 2, // Increase z-index to place content above animations
             }}
