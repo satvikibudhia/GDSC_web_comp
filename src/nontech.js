@@ -8,25 +8,25 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 const ItemCard = ({ image, name, text }) => {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="300"
-        image={image}
-        alt={name}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div" align="center">
-          {name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" align="center">
-          {text}
-        </Typography>
-      </CardContent>
-    </Card>
-  );
-};
+    return (
+      <Card sx={{ maxWidth: 250 }}> {}
+        <CardMedia
+          component="img"
+          height="200vh" 
+          image={image}
+          alt={name}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div" align="center">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" align="center">
+            {text}
+          </Typography>
+        </CardContent>
+      </Card>
+    );
+  };
 
 const Page = () => {
   const [selectedTopic, setSelectedTopic] = useState("All");
