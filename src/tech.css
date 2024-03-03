@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section {
+    padding: 20px;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  
+  .grey {
+    background-color: #f0f0f0; /* Light grey */
+  }
+  
+  .additional-box {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .profile-image {
+    width: 5vw; /* Adjust according to your image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .name {
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .additional-box {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  }
+  
