@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import gdscImage from "./images/team.png";
 import Switch from"./switchteam.js";
+
 const ItemCard = ({ image, name, text }) => {
     return (
-      <div style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px', width: '200px' }}>
+      <div 
+      style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px', width: '200px' }}>
         <img src={image} alt={name} style={{ maxWidth: '100%', height: 'auto' }} />
         <h3>{name}</h3>
         <p>{text}</p>
@@ -111,10 +113,8 @@ function App() {
             </p>
           </div>
         </div>
-
-        {/* New Section with 2 Item Cards */}
         <div style={{ marginTop: '50px', textAlign: 'center' }}>
-          <h2>New Section</h2>
+          <h2>GDSC Leads</h2>
           <div style={{ display: 'flex', flexDirection: windowWidth < 600 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
             {/* Item Cards */}
             <ItemCard

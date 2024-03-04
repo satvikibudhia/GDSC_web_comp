@@ -34,16 +34,16 @@ const Page = () => {
   const sections = [
     { title: "All", cards: [] },
     { title: "Podcast", cards: [
-      { image: require('./team_images/srishti_tripathi.png'), name: "Podcast Host 1", text: "Description of Podcast Host 1" },
-      { image: require('./team_images/shardul_kacheria.png'), name: "Podcast Host 2", text: "Description of Podcast Host 2" },
-      { image: require('./team_images/uday_badola.png'), name: "Podcast Host 2", text: "Description of Podcast Host 2" }
+      { image: require('./team_images/srishti_tripathi.png'), name: "Srishti Tripathi", text: "" },
+      { image: require('./team_images/shardul_kacheria.png'), name: "Shardul Kacheria", text: "" },
+      { image: require('./team_images/uday_badola.png'), name: "Uday Badola", text: "" }
     ]},
     { title: "Design", cards: [
-      { image: require('./team_images/ruhani.png'), name: "Designer 1", text: "Description of Designer 1" },
-      { image: require('./team_images/tawishi_gupta.png'), name: "Designer 2", text: "Description of Designer 2" }
+      { image: require('./team_images/ruhani.png'), name: "Ruhani", text: "" },
+      { image: require('./team_images/tawishi_gupta.png'), name: "Tawishi Gupta", text: "" }
     ]},
     { title: "Events", cards: [
-      { image: require('./team_images/ria_vinod.png'), name: "Event Organizer 1", text: "Description of Event Organizer 1" },      
+      { image: require('./team_images/ria_vinod.png'), name: "Ria Vinod", text: "" },      
     ]},
   ];
 
