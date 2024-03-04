@@ -151,6 +151,20 @@ function App() {
               member to explore their passions and contribute meaningfully to the
               tech industry.
             </p>
+            <button
+              onClick={() => window.location.href='/team'}
+              style={{
+                fontSize: "1rem",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                backgroundColor: "#007bff",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Meet the Team
+            </button>
           </div>
         </div>
       </div>

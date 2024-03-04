@@ -6,10 +6,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import data from './nontech.json'; // Import the JSON data
 
 const ItemCard = ({ image, name, text }) => {
     return (
-      <Card sx={{ maxWidth: 250 }}> {}
+      <Card sx={{ maxWidth: 250 }}>
         <CardMedia
           component="img"
           height="200vh" 
@@ -26,33 +27,19 @@ const ItemCard = ({ image, name, text }) => {
         </CardContent>
       </Card>
     );
-  };
+};
 
 const Page = () => {
   const [selectedTopic, setSelectedTopic] = useState("All");
 
-  const sections = [
-    { title: "All", cards: [] },
-    { title: "Podcast", cards: [
-      { image: require('./team_images/srishti_tripathi.png'), name: "Srishti Tripathi", text: "" },
-      { image: require('./team_images/shardul_kacheria.png'), name: "Shardul Kacheria", text: "" },
-      { image: require('./team_images/uday_badola.png'), name: "Uday Badola", text: "" }
-    ]},
-    { title: "Design", cards: [
-      { image: require('./team_images/ruhani.png'), name: "Ruhani", text: "" },
-      { image: require('./team_images/tawishi_gupta.png'), name: "Tawishi Gupta", text: "" }
-    ]},
-    { title: "Events", cards: [
-      { image: require('./team_images/ria_vinod.png'), name: "Ria Vinod", text: "" },      
-    ]},
-  ];
+  const { sections } = data; // Extract sections from imported data
 
   const handleTopicChange = (event) => {
     setSelectedTopic(event.target.value);
   };
 
   return (
-    <div className="container" style={{ overflow:'visible'  }}>
+    <div className="container" style={{ overflow:'visible' }}>
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <Select
           value={selectedTopic}
@@ -70,7 +57,6 @@ const Page = () => {
       {sections.map((section, index) => (
         (selectedTopic === "All" || selectedTopic === section.title) && (
           <div key={index} className={`section ${index % 2 === 0 ? 'white' : 'grey'}`}>
-            {/* Conditionally render the text based on the selected topic */}
             {(selectedTopic === "All" || selectedTopic === section.title) && 
               <div>
                 {(selectedTopic === "All" && section.title !== "All") && 
@@ -82,7 +68,7 @@ const Page = () => {
                   {section.cards && section.cards.map((card, cardIndex) => (
                     <ItemCard
                       key={cardIndex}
-                      image={card.image}
+                      image={require(`${card.image}`)} // Use require dynamically
                       name={card.name}
                       text={card.text}
                     />

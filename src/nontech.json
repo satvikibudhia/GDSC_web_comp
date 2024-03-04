@@ -1,0 +1,30 @@
+{
+    "sections": [
+      {
+        "title": "All",
+        "cards": []
+      },
+      {
+        "title": "Podcast",
+        "cards": [
+          { "image": "./team_images/srishti_tripathi.png", "name": "Srishti Tripathi", "text": "" },
+          { "image": "./team_images/shardul_kacheria.png", "name": "Shardul Kacheria", "text": "" },
+          { "image": "./team_images/uday_badola.png", "name": "Uday Badola", "text": "" }
+        ]
+      },
+      {
+        "title": "Design",
+        "cards": [
+          { "image": "./team_images/ruhani.png", "name": "Ruhani", "text": "" },
+          { "image": "./team_images/tawishi_gupta.png", "name": "Tawishi Gupta", "text": "" }
+        ]
+      },
+      {
+        "title": "Events",
+        "cards": [
+          { "image": "./team_images/ria_vinod.png", "name": "Ria Vinod", "text": "" }
+        ]
+      }
+    ]
+  }
+  

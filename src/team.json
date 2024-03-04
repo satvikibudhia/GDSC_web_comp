@@ -1,0 +1,48 @@
+[
+    {
+      "title": "All",
+      "cards": []
+    },
+    {
+      "title": "Artificial Intelligence",
+      "cards": [
+        { "image": "./team_images/ananya_vashisht.png", "name": "Dhwani Parekh", "text": "" },
+        { "image": "./team_images/smriti_sinha.png", "name": "Smriti Sinha", "text": "" }
+      ]
+    },
+    {
+      "title": "Flutter",
+      "cards": [
+        { "image": "./team_images/dev_bhanushali.png", "name": "Dev Bhanushali", "text": "" },
+        { "image": "./team_images/sumedh_dongre.png", "name": "Sumedh Dongre", "text": "" }
+      ]
+    },
+    {
+      "title": "Game Development",
+      "cards": [
+        { "image": "./team_images/yash_parkhi.png", "name": "Yash Parkhi", "text": "" }
+      ]
+    },
+    {
+      "title": "Android",
+      "cards": [
+        { "image": "./team_images/siddharth_prabhakar.png", "name": "Siddharth Prabhakar", "text": "" }
+      ]
+    },
+    {
+      "title": "Competitive Programming",
+      "cards": [
+        { "image": "./team_images/yajushreshta_shukla.png", "name": "Yajushreshtha Shukla", "text": "" },
+        { "image": "./team_images/megha_beria.png", "name": "Megha Beria", "text": "" },
+        { "image": "./team_images/divyansh_kumar.png", "name": "Divyansh Kumar", "text": "" }
+      ]
+    },
+    {
+      "title": "Cloud",
+      "cards": [
+        { "image": "./team_images/gautam_ranjhas.png", "name": "Gautam Ranjhas", "text": "" },
+        { "image": "./team_images/chahak_sengar.png", "name": "Chahak Sengar", "text": "" }
+      ]
+    }
+  ]
+  

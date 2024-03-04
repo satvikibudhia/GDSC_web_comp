@@ -6,14 +6,15 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import data from './team.json';
 
 const ItemCard = ({ image, name, text }) => {
     return (
-      <Card sx={{ maxWidth: 250 }}> {}
+      <Card sx={{ maxWidth: 250 }}>
         <CardMedia
           component="img"
           height="200vh" 
-          image={image}
+          image={require(`${image}`)} // Use require to import images
           alt={name}
         />
         <CardContent>
@@ -26,44 +27,17 @@ const ItemCard = ({ image, name, text }) => {
         </CardContent>
       </Card>
     );
-  };
+};
 
 const Page = () => {
   const [selectedTopic, setSelectedTopic] = useState("All");
-
-  const sections = [
-    { title: "All", cards: [] },
-    { title: "Artificial Intelligence", cards: [
-      { image: require('./team_images/dhwani_parekh.png'), name: "Dhwani Parekh", text: "" },
-      { image: require('./team_images/smriti_sinha.png'), name: "Smriti Sinha", text: "" }
-    ]},
-    { title: "Flutter", cards: [
-      { image: require('./team_images/dev_bhanushali.png'), name: "Dev Bhanushali", text: "" },
-      { image: require('./team_images/sumedh_dongre.png'), name: "Sumedh Dongre", text: "" }
-    ]},
-    { title: "Game Development", cards: [
-      { image: require('./team_images/yash_parkhi.png'), name: "Yash Parkhi", text: "" },
-    ]},
-    { title: "Android", cards: [
-      { image: require('./team_images/siddharth_prabhakar.png'), name: "Siddharth Prabhakar", text: "" },
-    ]},
-    { title: "Competitive Programming", cards: [
-      { image: require('./team_images/yajushreshta_shukla.png'), name: "Yajushreshtha Shukla", text: "" },
-      { image: require('./team_images/megha_beria.png'), name: "Megha Beria", text: "" },
-      { image: require('./team_images/divyansh_kumar.png'), name: "Divyansh Kumar", text: "" },
-    ]},
-    { title: "Cloud", cards: [
-      { image: require('./team_images/gautam_ranjhas.png'), name: "Gautam Ranjhas", text: "" },
-      { image: require('./team_images/chahak_sengar.png'), name: "Chahak Sengar", text: "" }
-    ]},
-  ];
 
   const handleTopicChange = (event) => {
     setSelectedTopic(event.target.value);
   };
 
   return (
-    <div className="container" style={{ overflow:'visible'  }}>
+    <div className="container" style={{ overflow:'visible' }}>
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <Select
           value={selectedTopic}
@@ -71,17 +45,16 @@ const Page = () => {
           displayEmpty
           inputProps={{ 'aria-label': 'Select a topic' }}
         >
-          {sections.map((section, index) => (
+          {data.map((section, index) => (
             <MenuItem key={index} value={section.title}>
               {section.title === "All" ? "Team" : section.title}
             </MenuItem>
           ))}
         </Select>
       </div>
-      {sections.map((section, index) => (
+      {data.map((section, index) => (
         (selectedTopic === "All" || selectedTopic === section.title) && (
           <div key={index} className={`section ${index % 2 === 0 ? 'white' : 'grey'}`}>
-            {/* Conditionally render the text based on the selected topic */}
             {(selectedTopic === "All" || selectedTopic === section.title) && 
               <div>
                 {(selectedTopic === "All" && section.title !== "All") && 
