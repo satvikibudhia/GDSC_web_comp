@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+    "cardImage": "./team_images/srishti_tripathi.png",
+    "popupImages": ["popupImage1.jpg", "popupImage2.jpg", "popupImage3.jpg"],
+    "coordinators": ["John Doe", "Jane Smith"],
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "date": "2024-03-05"
+  },
+  {
+    "id": 2,
+    "name": "Item 2",
+    "cardImage": "./team_images/srishti_tripathi.png",
+    "popupImages": ["popupImage4.jpg", "popupImage5.jpg"],
+    "coordinators": ["Alice Johnson", "Bob Brown"],
+    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "date": "2024-03-06"
+  },
+  {
+    "id": 3,
+    "name": "Item 2",
+    "cardImage": "./team_images/srishti_tripathi.png",
+    "popupImages": ["popupImage4.jpg", "popupImage5.jpg"],
+    "coordinators": ["Alice Johnson", "Bob Brown"],
+    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "date": "2024-03-06"
+  }
+]
