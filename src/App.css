@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Display&display=swap');
+
 .text-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  font-family: 'Google Sans Display', sans-serif; /* Apply Google Sans Display font */
+  color: grey; /* Set default font color to grey */
 }
 
 .gdsc-text span {
-  font-size: 4vh; 
+  font-size: 4vh;
   transition: all 0.5s ease-in-out;
   transform-origin: left center; /* Set the transform origin to the left */
-  transform: rotateY(90deg); 
+  transform: rotateY(90deg);
 }
 
 .expanded-text {
@@ -21,6 +25,10 @@
 .red {
   color: #E94234;
 }
+.grey {
+  color: grey;
+}
+
 
 .blue {
   color: #4185F4;
@@ -39,13 +47,11 @@
     font-size: 5.5vh; /* Adjust font size for larger screens */
     transition: all 0.5s ease-in-out;
     transform-origin: left center; /* Set the transform origin to the left */
-  transform: rotateY(90deg); 
+    transform: rotateY(90deg);
   }
   
   .expanded-text {
-    font-size: 5.5vh; 
+    font-size: 5.5vh;
     transition: all 0.5s ease-in-out;
   }
 }
-
-

@@ -47,30 +47,39 @@ const Abt = () => {
     <div style={{ 
       width: dimensions.width, 
       height: dimensions.height, 
-      backgroundImage: dimensions.width < 700 ? `url(${pic})` : `url(${herobg})`
-      , 
+      backgroundImage: dimensions.width < 700 ? `url(${pic})` : `url(${herobg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      position: 'relative' // Make sure the container is positioned relatively
     }}>
-      <Lottie 
-        animationData={animationData} 
-        loop={false} 
-        autoplay={true} 
-        style={{ width: '100%', height: '100%' }}
-        onComplete={handleAnimationComplete} 
-      />
+      <div style={{ 
+        width: '100%', 
+        height: '100%',
+        position: 'absolute', // Position the animation container absolutely
+        top: dimensions.width < 700 ? '0' : 0, // Move animation by 15vh on mobile
+        left: 0
+      }}>
+        <Lottie 
+          animationData={animationData} 
+          loop={false} 
+          autoplay={true} 
+          style={{ width: '100%', height: '100%' }}
+          onComplete={handleAnimationComplete} 
+        />
+      </div>
       {!showExpandedText && (
         <div className="text-container" style={{ textAlign: 'center' }}>
+          {/* Add your text content here */}
         </div>
       )}
       {showText && (
         <div className="text-container" style={{ textAlign: 'left', paddingTop: dimensions.width < 700 ? '30.5vh' : '5vw' }}>
           <div className={showExpandedText ? "expanded-text" : "gdsc-text"} style={{ lineHeight: "1.2", paddingLeft: dimensions.width < 700 ? "30.5vw" : "5vw" }}>
             {showExpandedText ? (
-              <>
+              <><b>
                 <span className="red">G</span>oogle <span className="blue">D</span>evelopers <span className="green">S</span>tudent <span className="yellow">C</span>lub
-                <br />
+                </b><br />
                 <span className="blue" style={{ paddingTop: window.innerWidth < 700 ? "-30vw" : "0vw",fontSize: dimensions.width < 700 ? "4.3vw" : "1.6vw", align:'center' }}>
                   Symbiosis Institute of Technology Chapter
                 </span>
@@ -80,11 +89,11 @@ const Abt = () => {
                 textAlign: 'center', 
                 paddingRight: window.innerWidth < 700 ? "20.5vw" : "5vw",
                 paddingBottom: window.innerWidth < 700 ? "30.5vw" : "5vw"
-              }}>
+              }}><b>
                 <span className="red">G</span>
                 <span className="blue">D</span>
                 <span className="green">S</span>
-                <span className="yellow">C</span><br/>
+                <span className="yellow">C</span></b><br/>
                 <span className="blue" style={{fontSize: window.innerWidth < 700 ? "4.5vw" : "1.2vw"}} >
                   Symbiosis Institute of Technology Chapter
                 </span>

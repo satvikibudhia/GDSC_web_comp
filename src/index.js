@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './home';
+import Nav from './navbar';
 import Abt from './about_gdsc';
 import Do from './gdsc_do';
 import Team from './team';
@@ -10,6 +11,7 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Nav/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />

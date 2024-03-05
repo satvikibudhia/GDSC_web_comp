@@ -129,8 +129,9 @@ function App() {
             {/* Heading */}
             <h1
               style={{
-                fontSize: windowWidth < 600 ? "3vw" : "2vw",
+                fontSize: windowWidth < 600 ? "3vw" : "1.5vw",
                 marginBottom: windowWidth < 600 ? "1vw" : "20px",
+                color:'grey',
                 textAlign: "left",
               }}
             >
@@ -142,6 +143,7 @@ function App() {
               style={{
                 fontSize: windowWidth < 600 ? "2.65vw" : "1.2vw",
                 marginBottom: windowWidth < 600 ? "1vw" : "3vw",
+                color:'grey'
               }}
             >
             GDSC SIT is dedicated to fostering collaboration and

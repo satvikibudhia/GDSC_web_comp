@@ -8,7 +8,7 @@ const MainPage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 700) {
-        setFontSize(1.4);
+        setFontSize(1.2);
       } else {
         setFontSize(4);
       }
@@ -21,7 +21,7 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div style={{ fontSize: `${fontSize}vw`, textAlign: 'center' }}>
+    <div style={{ fontSize: `${fontSize}vw`, textAlign: 'center' ,color:'grey'}}>
       <h1>About the community!</h1>
       <About />
       <About2 />

@@ -8,6 +8,7 @@ const styles = {
   title: {
     textAlign: "center",
     fontSize: "24px",
+    color:'#474747',
     fontWeight: "bold",
     margin: "20px 0",
   },
@@ -29,10 +30,13 @@ const styles = {
     width: "160px",
     height: "160px",
     paddingBottom: "100px",
+    color:'474747',
+    
   },
   text: {
     margin: "5px 0",
     fontWeight: "bold",
+    fontcolor:'474747',
   },
   subtext: {
     fontStyle: "italic",
