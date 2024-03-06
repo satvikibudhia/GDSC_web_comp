@@ -4,11 +4,13 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
 import logo from './images/logo.png'; // Import your logo here
 
 const pages = [
@@ -18,14 +20,14 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleToggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handlePageNavigation = (path) => {
+    window.location.href = path;
   };
 
   return (
@@ -57,7 +59,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={() => (window.location.href = page.path)}
+                onClick={() => handlePageNavigation(page.path)}
                 sx={{ mx: 1, color: 'grey' }}
               >
                 {page.name}
@@ -65,43 +67,34 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          {/* Dropdown menu for small screens */}
+          {/* Slider for small screens */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleToggleDrawer}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+            <Drawer
+              anchor="right"
+              open={isDrawerOpen}
+              onClose={handleToggleDrawer}
             >
-              {/* Mapping pages to the dropdown menu */}
-              {pages.map((page) => (
-                <MenuItem key={page.name} onClick={() => (window.location.href = page.path)}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              <List>
+                {pages.map((page) => (
+                  <ListItem
+                    button
+                    key={page.name}
+                    onClick={() => handlePageNavigation(page.path)}
+                  >
+                    <ListItemText primary={page.name} />
+                  </ListItem>
+                ))}
+              </List>
+            </Drawer>
           </Box>
         </Toolbar>
       </Container>

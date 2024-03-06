@@ -8,12 +8,14 @@ import Do from './gdsc_do';
 import Team from './team';
 import Events from './itemcard';
 import Footer from './footer';
+import Scroll from './scrolltop';
 import './App.css'; 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Nav/>
+    <Scroll/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />

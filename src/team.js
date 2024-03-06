@@ -91,9 +91,10 @@ function App() {
             {/* Heading */}
             <h1
               style={{
-                fontSize: windowWidth < 600 ? "3vw" : "2vw",
+                fontSize: windowWidth < 600 ? "8vw" : "4vw",
                 marginBottom: windowWidth < 600 ? "1vw" : "20px",
                 textAlign: "left",
+                color:'grey'
               }}
             >
               Our Team
@@ -102,19 +103,20 @@ function App() {
             {/* Updated Content */}
             <p
               style={{
-                fontSize: windowWidth < 600 ? "2.65vw" : "1.2vw",
+                fontSize: windowWidth < 600 ? "4vw" : "1.2vw",
                 marginBottom: windowWidth < 600 ? "1vw" : "3vw",
+                color:'grey'
               }}
             >
-                <b>
+                <b><h3>
                   The ones who are making it happen...
-                </b><br/>
+                </h3></b><br/>
 
                 Learning goes hand-in-hand with building new and cool stuff. With our incredible team, we aim to solve numerous problems in day-to-day life and explore new heights in technology!
             </p>
           </div>
         </div>
-        <div style={{ marginTop: '50px', textAlign: 'center' }}>
+        <div style={{ marginTop: '50px', textAlign: 'center' ,color:'grey'}}>
           <h2>GDSC Leads</h2>
           <div style={{ display: 'flex', flexDirection: windowWidth < 600 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
             {/* Item Cards */}
