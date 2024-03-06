@@ -1,48 +1,55 @@
 [
   {
     "id": 1,
-    "name": "Item 1",
+    "name": "Flutter Workshop",
     "cardImage": "./event_images/flutter.png",
-    "popupImages": ["./team_images/srishti_tripathi.png", "./team_images/srishti_tripathi.png"],
-    "coordinators": ["John Doe", "Jane Smith"],
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "date": "2024-03-05"
-  },
+    "popupImages": [
+      "./event_images/flutter.png",
+      "./event_images/flutterr/flutter1.JPG",
+      "./event_images/flutterr/flutter2.jpg",
+      "./event_images/flutterr/flutter3.jpg",
+      "./event_images/flutterr/flutter4.jpg"
+    ],
+    "coordinators": ["Sumedh Dhongre", "Dev Bhanushali"],
+      "intro": "The Flutter Workshop was a hit, offering a deep dive into Google's Flutter toolkit for UI development. Covering an introduction to Flutter, including its features and versatility for mobile, web, and desktop apps, the workshop explored Flutter architecture, emphasizing the importance of widgets in UI creation. It introduced Dart programming basics for Flutter development and included a hands-on workshop segment where participants modified a sample Flutter app, enhancing its features and UI. Highlights included engaging participants throughout, interactive Q&A sessions, and practical exercises solidifying understanding. Feedback was overwhelmingly positive, with participants loving the comprehensive coverage and particularly enjoying the hands-on segment. The workshop successfully introduced Flutter and Dart programming."
+          ,      "date": "11th August, 2023"
+  }
+,  
   {
     "id": 2,
-    "name": "Item 2",
+    "name": "Introduction to Game Development",
     "cardImage": "./event_images/game_dev.png",
-    "popupImages": ["./team_images/srishti_tripathi.png", "./team_images/srishti_tripathi.png"],
-    "coordinators": ["Alice Johnson", "Bob Brown"],
-    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-    "date": "2024-03-06"
+    "popupImages": ["./event_images/game_dev.png","./event_images/gamedev/gamedev.png", "./event_images/gamedev/gamedev2.png", "./event_images/gamedev/gamedev3.png"],
+    "coordinators": ["Yash Parkhi"],
+    
+      "intro":" The dynamic workshop embarked on a journey to immerse participants in the exhilarating realm of game creation, aiming to equip them with hands-on experience using prominent game development tools such as Pygame, Piskell, and SFXR. Despite encountering a brief initial setback, the session encapsulated a comprehensive exploration into the fundamentals of game development, fostering creativity in sprite design and 8-bit audio generation. Throughout the event, attendees were guided through foundational concepts of Pygame, delved into sprite creation with Piskell, and gained insight into crafting nostalgic audio effects using SFXR. Despite challenges, including installation hurdles and workshop noise, the interactive sessions provided practical engagement, offering a glimpse into the potential of game development. As the workshop unfolded, it became evident that future prospects for enhanced engagement and continued workshops were promising, fueled by the overwhelmingly positive feedback and participants' expressed interest in exploring advanced game development concepts and tools.",
+        "date": " 19th August, 2023"
   },
   {
     "id": 3,
-    "name": "Item 2",
+    "name": "Introduction to Game Development",
     "cardImage": "./event_images/game_dev.png",
-    "popupImages": ["./team_images/srishti_tripathi.png", "./team_images/srishti_tripathi.png"],
-    "coordinators": ["Alice Johnson", "Bob Brown"],
-    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-    "date": "2024-03-06"
+    "popupImages":["./event_images/game_dev.png","./event_images/gamedev/gamedev4.png", "./event_images/gamedev/gamedev5.png", "./event_images/gamedev/gamedev6.png"],
+    "coordinators": ["Yash Parkhi"],
+    "intro": "GDSC Game Dev orchestrated an impactful workshop titled Customizing the Dino Game with Pygame, Sfxr, and Piskel, aimed at immersing over 25 eager participants in the world of game development using Python. The dynamic session covered Pygame fundamentals, Sfxr for sound effects creation, and Piskel for asset customization, fostering a vibrant and collaborative learning environment. Participants engaged in hands-on activities, including a mini game development challenge where they successfully applied acquired skills to create a mini Dino game. The event also included pre-workshop support, active participant involvement, and an exciting announcement of project team selections for future endeavors. Future prospects include follow-up sessions, ongoing enriching events, extended learning opportunities, and community-building initiatives to foster collaboration and skill development among participants.",
+    "date": "9th September, 2023"
   },
   {
     "id": 4,
-    "name": "Item 2",
+    "name": "Introduction to Open Source",
     "cardImage": "./event_images/open_source.png",
-    "popupImages": ["./team_images/srishti_tripathi.png", "./team_images/srishti_tripathi.png"],
-    "coordinators": ["Alice Johnson", "Bob Brown"],
-    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-    "date": "2024-03-06"
+    "popupImages": ["./event_images/open_source.png"],
+    "coordinators": ["Yajushreshtha Shukla","Ishaan Siddiqui"],
+    "intro": "The Open-Source Workshop, a collaboration between the Symbiosis Open-Source Society and Google Developer Student Clubs (GDSC), attracted a fervent response from students and tech enthusiasts alike. The event encompassed a series of technical sessions, covering fundamental principles of open-source software, version control using Git and GitHub, diverse ways of contributing to projects, and best practices in open-source development. Additionally, participants gained insights into Google Summer of Code (GSoc) participation and Hacktoberfest involvement. Hands-on activities included setting up Git and GitHub, crafting impactful pull requests, and effective proposal writing. The workshop also facilitated open discussions and Q&A sessions, fostering knowledge sharing and addressing queries regarding open-source development.",
+    "date": "6th October, 2023"
   },
   {
     "id": 5,
-    "name": "Item 2",
+    "name": "AI In HealthCare",
     "cardImage": "./event_images/ai_healthcare.png",
-    "popupImages": ["./team_images/srishti_tripathi.png", "./team_images/srishti_tripathi.png"],
-    "coordinators": ["Alice Johnson", "Bob Brown"],
-    "intro": "Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-    "date": "2024-03-06"
+    "popupImages": ["./event_images/ai_healthcare.png","./event_images/artificial_intelligence/ai1.jpeg", "./event_images/artificial_intelligence/ai2.jpeg","./event_images/artificial_intelligence/ai3.jpeg","./event_images/artificial_intelligence/ai4.jpeg","./event_images/artificial_intelligence/ai5.jpeg"],
+    "coordinators": [" Sairam Adithya"," Dhvani Parekh", "Aarohi Panicker", "Aaradhya Badal"," Riya Shukla"],
+    "intro":"The Google Developer Student Clubs (GDSC) organized a highly successful AI in Healthcare Workshop: from Python Basics to Neural Networks, aiming to cater to a diverse audience, from beginners to those seeking to reinforce their AI/ML fundamentals in the healthcare domain. Divided into four sessions over two days, the event featured keynote addresses by experienced students, technical sessions covering Python basics, data preprocessing, ML, and DL introductions, as well as hands-on activities like setting up Google Colab and working on real healthcare datasets. Open discussions and Q&A sessions facilitated interactive learning, empowering participants with a comprehensive understanding of AI applications in healthcare and strengthening their skills in Python, data handling, and applying ML/DL models. Overall, the workshop provided a valuable platform for knowledge sharing and hands-on experience, leaving attendees inspired to explore further in the AI healthcare domain.",
+    "date": "20th -21st October, 2023"
   }
-  
 ]

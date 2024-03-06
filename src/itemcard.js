@@ -45,7 +45,7 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
                 <CardMedia
                     component="img"
                     height="300"
-                    image={require(`${cardImage}`)} // Modified line
+                    image={require(`${cardImage}`)} 
                     alt={id}
                 />
                 <Typography gutterBottom variant="h6" component="div" align="center">
@@ -60,64 +60,69 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
                 aria-describedby="modal-description"
                 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             >
-                <Box
-                    style={{
-                        width: 400,
-                        backgroundColor: 'white',
-                        border: '2px solid #000',
-                        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-                        padding: 16,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        outline: 'none',
-                    }}
-                >
-                    <IconButton style={{ alignSelf: 'flex-end' }} onClick={handleClose}><CloseIcon /></IconButton>
-                    <Typography variant="h6" id="modal-title">
-                        {itemName}
-                    </Typography>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                        <IconButton onClick={handlePrevImage}><ArrowBackIcon /></IconButton>
-                        <img src={require(`${popupImages[currentImageIndex]}`)} alt={`Popup ${currentImageIndex}`} style={{ maxWidth: '100%', maxHeight: 300 }} />
-                        <IconButton onClick={handleNextImage}><ArrowForwardIcon /></IconButton>
-                    </div>
-                    <Typography variant="body1" id="modal-description" align="center" style={{ marginTop: 16 }}>
-                        {intro}
-                    </Typography>
-                    <Typography variant="body2" id="modal-description" align="center" style={{ marginTop: 16 }}>
-                        <strong>Coordinators:</strong> {coordinators.join(', ')}
-                    </Typography>
-                    <Button onClick={handleNextCard} style={{ marginTop: 16 }}>Next</Button>
-                </Box>
+                <div style={{ overflowY: 'auto',overflowX:'hidden' , maxHeight: '80vh'}}> {/* Added style for vertical scrolling */}
+                    <Box
+                        style={{
+                            width: 400,
+                            backgroundColor: 'white',
+                            border: '2px solid #000',
+                            boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+                            padding: 16,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            outline: 'none',
+                        }}
+                    >
+                        <IconButton style={{ alignSelf: 'flex-end' }} onClick={handleClose}><CloseIcon /></IconButton>
+                        <Typography variant="h6" id="modal-title">
+                            {itemName}
+                        </Typography>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'justify', marginBottom: 16 }}>
+                            <IconButton onClick={handlePrevImage}><ArrowBackIcon /></IconButton>
+                            <img src={require(`${popupImages[currentImageIndex]}`)} alt={`Popup ${currentImageIndex}`} style={{ maxWidth: '80%', maxHeight: 300 }} />
+                            <IconButton onClick={handleNextImage}><ArrowForwardIcon /></IconButton>
+                        </div>
+                        <Typography variant="body1" id="modal-description" align="justify" style={{ marginTop: 16 }}>
+                            {intro}
+                        </Typography>
+                        <Typography variant="body2" id="modal-description" align="justify" style={{ marginTop: 16 }}>
+                           <h3> <strong>Conducted by:</strong>{coordinators.join(', ')}</h3> 
+                        </Typography>
+                        <Button onClick={handleClose} style={{ marginTop: 16 }}>Close</Button>
+                    </Box>
+                </div>
             </Modal>
         </>
     );
 };
 
 const Page = () => {
-    const [currentCardIndex, setCurrentCardIndex] = useState(0);
+    const [setCurrentCardIndex] = useState(0);
 
     const handleNextCard = () => {
         setCurrentCardIndex((prevIndex) => prevIndex + 1);
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-                {data.map((item, index) => (
-                    <ItemCard
-                        key={item.id}
-                        id={item.id}
-                        itemName={item.name}
-                        cardImage={item.cardImage}
-                        popupImages={item.popupImages}
-                        coordinators={item.coordinators}
-                        intro={item.intro}
-                        date={item.date} // Passing date prop to ItemCard component
-                        onNextClick={handleNextCard}
-                    />
-                ))}
+        <div style={{ paddingTop: '70px' }}> {/* Adding padding to the top */}
+            <Typography variant="h2" align="center" gutterBottom color={"grey"}><b>EVENTS</b></Typography>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+                    {data.map((item, index) => (
+                        <ItemCard
+                            key={item.id}
+                            id={item.id}
+                            itemName={item.name}
+                            cardImage={item.cardImage}
+                            popupImages={item.popupImages}
+                            coordinators={item.coordinators}
+                            intro={item.intro}
+                            date={item.date} // Passing date prop to ItemCard component
+                            onNextClick={handleNextCard}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
