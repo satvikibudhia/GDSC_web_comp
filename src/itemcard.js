@@ -39,13 +39,13 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
     return (
         <>
             <Card
-                style={{ maxWidth: 200, margin: '10px', cursor: 'pointer' }}
+                style={{ Width: 350, height: 'auto', margin: '10px', cursor: 'pointer' }}
                 onClick={handleOpen}
             >
                 <CardMedia
                     component="img"
-                    height="150"
-                    image={cardImage}
+                    height="300"
+                    image={require(`${cardImage}`)} // Modified line
                     alt={id}
                 />
                 <Typography gutterBottom variant="h6" component="div" align="center">
@@ -79,7 +79,7 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
                     </Typography>
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                         <IconButton onClick={handlePrevImage}><ArrowBackIcon /></IconButton>
-                        <img src={popupImages[currentImageIndex]} alt={`Popup ${currentImageIndex}`} style={{ maxWidth: '100%', maxHeight: 300 }} />
+                        <img src={require(`${popupImages[currentImageIndex]}`)} alt={`Popup ${currentImageIndex}`} style={{ maxWidth: '100%', maxHeight: 300 }} />
                         <IconButton onClick={handleNextImage}><ArrowForwardIcon /></IconButton>
                     </div>
                     <Typography variant="body1" id="modal-description" align="center" style={{ marginTop: 16 }}>

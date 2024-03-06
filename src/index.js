@@ -6,6 +6,7 @@ import Nav from './navbar';
 import Abt from './about_gdsc';
 import Do from './gdsc_do';
 import Team from './team';
+import Events from './itemcard';
 import './App.css'; 
 import './index.css';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/about" element={<Abt />} />
         <Route path="/gdsc_do" element={<Do />} />
         <Route path="/team" element={<Team />} /> 
+        <Route path="/events" element={< Events/>} /> 
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
