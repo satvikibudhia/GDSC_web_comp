@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import gdscImage from "./images/team.png";
 import Switch from"./switchteam.js";
 
+
 const ItemCard = ({ image, name, text }) => {
     return (
       <div 

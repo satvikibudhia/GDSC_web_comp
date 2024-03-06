@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import data from './team.json';
+import Footer from './footer'
 
 const ItemCard = ({ image, name, text }) => {
     return (
@@ -77,6 +78,7 @@ const Page = () => {
           </div>
         )
       ))}
+      <Footer/>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Abt from './about_gdsc';
 import Do from './gdsc_do';
 import Team from './team';
 import Events from './itemcard';
+import Footer from './footer';
 import './App.css'; 
 import './index.css';
 
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path="/events" element={< Events/>} /> 
       </Routes>
     </BrowserRouter>
+    <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );

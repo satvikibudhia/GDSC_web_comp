@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import AdbIcon from '@mui/icons-material/Adb';
+import logo from './images/logo.png'; // Import your logo here
 
 const pages = [
   { name: 'Home', path: '/' },
@@ -29,10 +29,10 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" sx={{ backgroundColor: '#f0f0f0', color: 'grey' }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+          {/* Logo section */}
           <Typography
             variant="h6"
             noWrap
@@ -48,10 +48,25 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img src={logo} alt="Logo" style={{ height: '2rem' }} />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          {/* Buttons for large screens */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {/* Mapping pages to buttons */}
+            {pages.map((page) => (
+              <Button
+                key={page.name}
+                onClick={() => (window.location.href = page.path)}
+                sx={{ mx: 1, color: 'grey' }}
+              >
+                {page.name}
+              </Button>
+            ))}
+          </Box>
+
+          {/* Dropdown menu for small screens */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -80,23 +95,13 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              {/* Mapping pages to the dropdown menu */}
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} onClick={() => (window.location.href = page.path)}>
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page.name}
-                onClick={() => window.location.href = page.path}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page.name}
-              </Button>
-            ))}
           </Box>
         </Toolbar>
       </Container>
