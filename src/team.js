@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Lottie from 'lottie-react'; // Import Lottie component
-import gdscImage from "./images/team.png";
+import Lottie from 'lottie-react'; 
 import Switch from "./switchteam.js";
 import "./styles.css"; 
 import ani from "./animation/teampic.json";

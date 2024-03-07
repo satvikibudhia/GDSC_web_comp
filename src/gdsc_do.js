@@ -8,7 +8,7 @@ const styles = {
   title: {
     textAlign: "center",
     fontSize: "24px",
-    color:'#474747',
+    color:'grey',
     fontWeight: "bold",
     margin: "20px 0",
   },
@@ -20,6 +20,8 @@ const styles = {
     justifyContent: "space-evenly",
     margin: "2em auto",
     padding: "0",
+    overflow: "hidden", // Add overflow hidden
+    position: "relative", // Add position relative
   },
   textBox: {
     display: "flex",
@@ -30,17 +32,17 @@ const styles = {
     width: "160px",
     height: "160px",
     paddingBottom: "100px",
-    color:'474747',
+    color:'grey',
     
   },
   text: {
     margin: "5px 0",
     fontWeight: "bold",
-    fontcolor:'474747',
+    fontcolor:'grey',
   },
   subtext: {
     fontStyle: "italic",
-    color: "#888",
+    color: "#grey",
     paddingBottom: "50px",
   },
   icon: {

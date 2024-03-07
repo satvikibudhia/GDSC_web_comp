@@ -40,19 +40,12 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
         }, 300); // Adjust slide transition time as needed
     };
 
-    const handleNextCard = () => {
-        onNextClick();
-        handleClose(); // Close the current card modal before opening the next one
-    };
-
-    // Auto-scroll functionality
     useEffect(() => {
         const interval = setInterval(() => {
-            handleNextImage();
-        }, 2000); // Change image every 2 seconds
+        }, 2000); 
 
         return () => clearInterval(interval);
-    }, []); // Empty dependency array
+    }, []); 
 
     return (
         <>

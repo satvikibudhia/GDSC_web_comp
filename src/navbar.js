@@ -11,8 +11,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from './images/logo.png'; // Import your logo here
-
+import logo from './images/logo.png'; 
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'Team', path: '/team' },

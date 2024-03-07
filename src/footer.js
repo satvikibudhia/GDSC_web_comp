@@ -16,6 +16,7 @@ export default function Footer() {
             ? theme.palette.grey[200]
             : theme.palette.grey[800],
         p: 6,
+        boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.5)"
       }}
     >
       <Container maxWidth="lg">
