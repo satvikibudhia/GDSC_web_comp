@@ -51,13 +51,13 @@ const Abt = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      position: 'relative' // Make sure the container is positioned relatively
+      position: 'relative' 
     }}>
       <div style={{ 
         width: '100%', 
         height: '100%',
-        position: 'absolute', // Position the animation container absolutely
-        top: dimensions.width < 700 ? '0' : 0, // Move animation by 15vh on mobile
+        position: 'absolute', 
+        top: dimensions.width < 700 ? '0' : 0, 
         left: 0
       }}>
         <Lottie 

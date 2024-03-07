@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -14,6 +14,7 @@ import data from './gdsc_events.json';
 const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, date, onNextClick }) => {
     const [open, setOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [slideDirection, setSlideDirection] = useState('right');
 
     const handleOpen = () => {
         setOpen(true);
@@ -24,17 +25,34 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
     };
 
     const handleNextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % popupImages.length);
+        setSlideDirection('left');
+        setTimeout(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % popupImages.length);
+            setSlideDirection('right');
+        }, 300); // Adjust slide transition time as needed
     };
 
     const handlePrevImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? popupImages.length - 1 : prevIndex - 1));
+        setSlideDirection('right');
+        setTimeout(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? popupImages.length - 1 : prevIndex - 1));
+            setSlideDirection('left');
+        }, 300); // Adjust slide transition time as needed
     };
 
     const handleNextCard = () => {
         onNextClick();
         handleClose(); // Close the current card modal before opening the next one
     };
+
+    // Auto-scroll functionality
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNextImage();
+        }, 2000); // Change image every 2 seconds
+
+        return () => clearInterval(interval);
+    }, []); // Empty dependency array
 
     return (
         <>
@@ -78,10 +96,19 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
                         <Typography variant="h6" id="modal-title">
                             {itemName}
                         </Typography>
-                        <div style={{ width: '100%', display: 'flex', justifyContent: 'justify', marginBottom: 16 }}>
-                            <IconButton onClick={handlePrevImage}><ArrowBackIcon /></IconButton>
-                            <img src={require(`${popupImages[currentImageIndex]}`)} alt={`Popup ${currentImageIndex}`} style={{ maxWidth: '80%', maxHeight: 300 }} />
-                            <IconButton onClick={handleNextImage}><ArrowForwardIcon /></IconButton>
+                        <div style={{ position: 'relative', width: '100%', marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
+                            <IconButton style={{ position: 'absolute', left: 0 ,zIndex: 1}} onClick={handlePrevImage}><ArrowBackIcon /></IconButton>
+                            <img
+                                src={require(`${popupImages[currentImageIndex]}`)}
+                                alt={`Popup ${currentImageIndex}`}
+                                style={{
+                                    maxWidth: 'auto',
+                                    maxHeight: 300,
+                                    transition: 'transform 0.3s ease-in-out',
+                                    transform: slideDirection === 'left' ? 'translateX(+50%)' : 'translateX(0)',
+                                }}
+                            />
+                            <IconButton style={{ position: 'absolute', right: 0 }} onClick={handleNextImage}><ArrowForwardIcon /></IconButton>
                         </div>
                         <Typography variant="body1" id="modal-description" align="justify" style={{ marginTop: 16 }}>
                             {intro}
@@ -98,12 +125,6 @@ const ItemCard = ({ id, cardImage, popupImages, coordinators, intro, itemName, d
 };
 
 const Page = () => {
-    const [setCurrentCardIndex] = useState(0);
-
-    const handleNextCard = () => {
-        setCurrentCardIndex((prevIndex) => prevIndex + 1);
-    };
-
     return (
         <div style={{ paddingTop: '70px' }}> {/* Adding padding to the top */}
             <Typography variant="h2" align="center" gutterBottom color={"grey"}><b>EVENTS</b></Typography>
@@ -119,7 +140,6 @@ const Page = () => {
                             coordinators={item.coordinators}
                             intro={item.intro}
                             date={item.date} // Passing date prop to ItemCard component
-                            onNextClick={handleNextCard}
                         />
                     ))}
                 </div>

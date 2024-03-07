@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#f0f0f0', color: 'grey' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#ffffff', color: 'grey' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           {/* Logo section */}
