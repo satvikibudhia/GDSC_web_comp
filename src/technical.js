@@ -48,7 +48,7 @@ const Page = () => {
         >
           {data.map((section, index) => (
             <MenuItem key={index} value={section.title}>
-              {section.title === "All" ? "Team" : section.title}
+              {section.title === "All" ? "All" : section.title}
             </MenuItem>
           ))}
         </Select>
